@@ -69,7 +69,7 @@ class YearlyweatherSpider(scrapy.Spider):
             yield item
 
         next_page = response.xpath('//*[@id="panel-main"]/div[2]/div/div/div[2]/a/@href').extract_first()
-        print('111111111 next page is ', next_page)
+        # print('111111111 next page is ', next_page)
 
         next_year = response.xpath('//*[@id="panel-main"]/div[2]/div/div/div[2]/a/text()').extract_first()
 
@@ -132,7 +132,7 @@ class YearlyweatherSpider(scrapy.Spider):
 
         next_page = response.xpath(
             '//*[@id="panel-main"]/div[2]/div/div/div[2]/a[2]/@href').extract_first()
-        print('222222222 next page is ', next_page)
+        # print('222222222 next page is ', next_page)
 
         next_year = response.xpath('//*[@id="panel-main"]/div[2]/div/div/div[2]/a[2]/text()').extract_first()
 
